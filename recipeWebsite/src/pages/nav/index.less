@@ -1,0 +1,129 @@
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  background: #cfdfef;
+  .ant-menu-horizontal {
+    border: none;
+  }
+}
+.nav-title {
+ margin-left: 20px;
+}
+
+.left {
+  .note-list {
+    background: #cfdfef;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    .title {
+      margin: -7px 0 4px;
+      display: inherit;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.5;
+    } // .title:visited {
+    // 	color: #969696;
+    // }
+    .have-img>div {
+      padding-right: 140px;
+    }
+    .have-img .wrap-img {
+      position: absolute;
+      top: 50%;
+      margin-top: -60px;
+      right: 0;
+      width: 125px;
+      height: 100px;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 4px;
+        border: 1px solid #f0f0f0;
+      }
+    }
+    li {
+      line-height: 20px;
+      position: relative;
+      width: 100%;
+      margin: 0 0 15px;
+      padding: 15px 2px 20px 0;
+      background: #cfdfef;
+      border-bottom: 1px solid #f0f0f0;
+      word-wrap: break-word;
+      .abstract {
+        margin: 0 0 8px;
+        font-size: 13px;
+        line-height: 24px;
+        color: #999;
+      }
+      .meta {
+        padding-right: 0 !important;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 20px;
+        a {
+          margin-right: 10px;
+          color: #b4b4b4;
+          &::hover {
+            transition: 0.1s ease-in;
+            -webkit-transition: 0.1s ease-in;
+            -moz-transition: 0.1s ease-in;
+            -o-transition: 0.1s ease-in;
+            -ms-transition: 0.1s ease-in;
+          }
+        }
+        span {
+          margin-right: 10px;
+          color: #b4b4b4;
+        }
+      }
+    }
+    li.have-img {
+      min-height: 140px;
+    }
+  }
+}
+
+.tags {
+  text-align: center;
+  min-height: 200px;
+  padding: 5px 0 20px 0;
+  .title {
+    font-size: 14px;
+    color: #969696;
+  }
+  .item {
+   cursor: pointer;
+   float: left;
+   padding: 5px 10px;
+   border-radius: 5px;
+   background-color: red;
+   color: #fff;
+   margin: 10px 10px 0 0;
+   &:nth-child(2n) {
+     background-color: #1890ff;
+   }
+   &:nth-child(3n) {
+     background-color: #6fa1d1;
+   }
+   &:nth-child(4n) {
+     background-color: #f84d78;
+   }
+   &:nth-child(5n) {
+     background-color: #d675c1;
+   }
+   &:nth-child(6n) {
+     background-color: #4c9447;
+   }
+   &:nth-child(7n) {
+     background-color: #49b0bb;
+   }
+   &:nth-child(8n) {
+     background-color: #d0d675;
+   }
+   &:nth-child(9n) {
+     background-color: #de7b5d;
+   }
+ }
+}

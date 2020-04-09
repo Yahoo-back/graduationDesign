@@ -1,0 +1,10 @@
+{"_id":{"$oid":"5c1c41d14a190a1b40f76523"},"count":25,"model":"User","field":"id","__v":0}
+{"_id":{"$oid":"5c1c41d14a190a1b40f76525"},"count":12,"model":"Comment","field":"id","__v":0}
+{"_id":{"$oid":"5c1c41d14a190a1b40f76526"},"count":0,"model":"TimeAxis","field":"id","__v":0}
+{"_id":{"$oid":"5c1c41d14a190a1b40f76522"},"count":20,"model":"Tag","field":"id","__v":0}
+{"_id":{"$oid":"5c1c41d14a190a1b40f76524"},"count":2,"model":"Link","field":"id","__v":0}
+{"_id":{"$oid":"5c1c41d14a190a1b40f76527"},"count":49,"model":"Article","field":"id","__v":0}
+{"_id":{"$oid":"5c1c41d14a190a1b40f76529"},"count":11,"model":"Message","field":"id","__v":0}
+{"_id":{"$oid":"5c1c41d14a190a1b40f76528"},"count":4,"model":"Category","field":"id","__v":0}
+{"_id":{"$oid":"5c233504435210367c75ba9c"},"count":7,"model":"News","field":"id","__v":0}
+{"_id":{"$oid":"5c233979809d053c58cd4757"},"count":12,"model":"newsTag","field":"id","__v":0}
