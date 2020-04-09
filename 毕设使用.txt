@@ -1,0 +1,13 @@
+项目目录：E:\recipes\node_blog\blog_admin_user_mongodb
+
+前端：E:\recipes\node_blog\blog_admin_user_mongodb\react_front\blog-react
+后端：E:\recipes\node_blog\blog_admin_user_mongodb\antd_admin\blog-react-admin
+数据库：E:\recipes\node_blog\blog_admin_user_mongodb\node_mongodb\blog-node
+
+
+数据库开启：
+1.先开启mongodb在cmd中输入services.msc  可手动启动服务mongoDB  
+2.再在项目下运行node ./bin/www
+管理员：yarn start
+管理员登录：邮箱登录admin@qq.com  密码：123456
+网站前端界面：yarn start

@@ -1,0 +1,52 @@
+git branch -a 查看分支
+git checkout zss  进入分支zss
+git pull origin zss 将zss分之内的文件下载到当前文件夹下
+（去掉不需要的留下需要的）
+git add .
+文件上传
+git commit -m "备注信息"
+git push -u origin zss 将文件上传至zss分支下
+
+将本地分支dev合并到远程分支shasha
+（上传代码至dev内，管理者可在用户dev提出的合并请求里看到用户提交至dev中的代码）
+
+
+将gitlab下的某个分支dev-bat拉下来：
+git clone +项目地址
+git pull origin dev-bat（拉dev-bat分支）
+
+文件已经上传至dev下，现在另开一个分支将上传到dev下的代码上传到分支zss/reactDemo下
+开一个新的分支并且上传文件：（进入要上传代码的文件夹下面）
+1.git checkout -b zss/reactDemo:新建一个分支  zss/reactDemo，并进入分支zss/reactDemo
+git checkout zss/reactDemo:进入到分支zss/reactDemo
+2.git pull 
+3.git add .
+4.git commit -m ""
+5.git push origin zss/reactDemo
+
+进入到zss/reactDemo分支，并将其内容拉至本地
+git checkout zss/reactDemo
+git pull origin zss/demo:将zss/demo分支下的内容下拉
+
+1.git clone git@gitlab.gizwits.com:zc_terminal/roomTmall_login_h5.git
+2.git branch -a 查看分支
+3.git checkout dev  进入到dev分支
+4.git add .  将本地文件上传
+5.git commit -m "注释"
+6.git push   文件上传
+
+
+
+已经在HomeConnect下修改代码并且解决了冲突合并到dev，想orderManage在homeconnect基础下继续开发，则在orderManage下git merge homeconnect，然后再
+git add .
+git commit -m 
+git merge dev
+最后将代码上传：git push origin orderManage
+
+
+
+解决冲突：
+进入分支ss：   git merge dev（将dev合并至ss分支）
+git add .（冲突解决后）
+git commit -m ""
+git push 

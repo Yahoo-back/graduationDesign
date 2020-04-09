@@ -1,0 +1,277 @@
+目录结构：
+前端：D:\antd-admin-learn\antd-admin-master
+后端：E:/recipes/node_serve_express/recipes【创建的express项目】
+mongodb数据库：E:\mongodb
+robomongo可视化数据库：E:\robomongo
+
+添加数据库管理员用户名：root  密码：root 权限：userAdminAnyDatabase
+E:\mongodb\bin：
+1.mongo
+2.db.createUser({user:'root',pwd:'root',roles:['userAdminAnyDatabase']})
+
+
+数据库名：recipes_users
+表：users（cmd中user集合要加s）
+属性: name:菜单用户测试   email:2928501731@qq.com
+
+
+目录：D:\antd-admin-learn\antd-admin-master（前端）
+
+
+mongoDB	数据库	
+因为MongoDB是基于文档的，文档是按BSON（JSON的轻量化二进制格式）存储的，增删改查等管理数据库的命令和JavaScript语法很像，这里我们选择mongoose来进行增删改查，mongoose构建在MongoDB之上，提供了Schema、Model和Document对象
+
+一、mongodb目录:
+1.mongodb/data/db:存放数据目录
+2.mongodb/data/log:存放日志目录
+
+
+二、启动mongod.exe
+进入E:mongodb\bin目录下--输入命令mongod.exe --dbpath E:\mongodb\data\db
+
+运行成功后于浏览器输入localhost:27017能显示则表示成功
+
+三、【设置自启动mongod.exe】
+1.创建文件mongodb.log.\mongodb\data\log\mongodb.log
+2.创建mongodb\mongo.config存入:
+dbpath=E:\mongodb\data\db
+logpath=E:\mongodb\data\log\mongodb.log
+3.进入E:mongodb\bin目录下--输入命令mongod.exe --config E:\mongodb\mongo.config --install --serviceName "MongoDB"
+[在cmd中输入services.msc  可手动启动服务mongoDB]
+
+
+【启动服务mongoDB】
+------------上述已操作，直接进入cmd内输入services.msc,-----------
+---------或于进入E:mongodb\bin目录下--输入命令mongod.exe --dbpath E:\mongodb\data\db-----------------
+
+
+----mogo添加管理员账号：E:mongodb\bin
+db.createUser({user:'root',pwd:'root',roles:['userAdminAnyDatabase']})
+
+
+
+四、安装mongoose【yarn add mongoose】
+1.安装好后连接数据库mongoDB：const mongoose = require("mongoose")
+
+
+-------------------------------------------------------------------------
+
+node.js--express（后端）
+E:/recipes/serve
+运行：进入相应的目录：E:/recipes/serve--cnpm run start
+(浏览器输入：127.0.0.1:3000/)
+E:/recipes/node_blog：基于Node的博客
+
+1.全局安装Express
+yarn global add express
+2.安装全局express生成器
+yarn global add express-generator
+3.安装mongoose【E:/recipes/node_serve_express/recipes】
+yarn add mongoose --save
+
+数据库创建
+1.use recipes_users
+
+//创建一张表，并插入一条数据
+db.users.insert({"name":"zhangangs","emali":"zhangangs@163.com","age":"26"});
+
+//查看数据
+db.users.find();
+
+
+
+
+
+
+
+数据库命令行操作
+1.创建数据库db_demo）
+use db_demo
+
+2.创建db_demo下的表goods
+db.createCollection("goods")
+
+3.插入数据于goods内
+db.goods.insert({"id":"1","name":"apple","price":10})
+
+4.数据表goods结果查询
+db.goods.find()
+
+5.数据的增删改
+db.goods.insert({"id":"1","name":"apple","price":10})? //新增
+
+????
+db.goods.update({"name":"apple"},{$set:{"price":20}})? //修改
+
+
+????
+db.goods.remove({"name":"apple"});? //删除
+
+
+
+
+github上传项目忽略node_moudles文件夹
+1.git init
+2.vim .gitignore
+在shell内输入node_modules/
+3.git dd .
+4.git commit -m ""
+5.git remote add origin https://github.com/Yahoo-back/Recipes_before.git
+5.git push -u origin master
+
+
+NodeCMS：
+数据库配置
+数据库名：admin
+数据库用户名：root
+数据库密码：root
+网站标题：NodeCMS
+Email:ghost@nodercms.com
+昵称：嘣哒啦嘣
+密码：123456
+
+
+
+
+
+
+
+
+
+
+
+前后端结合React+node
+前端界面分析：
+app/conatiner/front: 普通用户浏览界面
+
+
+
+
+
+
+
+
+guitar_shop
+
+1.注册：
+ firstname,
+            lastname,
+            email,
+            password,
+            confirmPassword
+
+登录： email,
+            password
+
+
+
+
+
+
+
+豆瓣音乐电影项目：（管理员：1234 1234  权限为50，权限>10为管理员）
+目录：E:\recipes\Node_React_withmongodb_of_Movie_Music\douban-React
+启动： yarn install
+
+mongoexport -d db -c food -o "E:\recipes\node_React_healthy_food_admin_mongodb\node-health\db\food.json" --type json --port 27017
+
+mongoexport -d db -c category -o "E:\recipes\node_React_healthy_food_admin_mongodb\node-health\db\category.json" --type json --port 27017
+
+
+mongorestore -h 127.0.0.1 -d db "E:\recipes\node_React_healthy_food_admin_mongodb\node-health\db"
+E:\recipes\node_React_healthy_food_admin_mongodb\node-health\db
+
+导入database\douban数据库
+进入：E:mongodb\bin
+操作：mongorestore -h 127.0.0.1 -d douban "E:\recipes\Node_React_withmongodb_of_Movie_Music\douban-React\doubanDatabase\douban"
+将数据导入本地数据库
+
+执行mongo  show dbs查看数据库是否导入成功
+
+
+运行项目：
+yarn install时报错node-gyp rebuild 后在c盘安装了python，然后又yarn add bcrypt再yarn install后成功
+
+运行：node app.js
+
+
+通用功能： 登录，查询
+
+
+普通用户可以登录注册评论电影
+管理员：
+登录
+对用户管理： 对用户查看修改删除
+对电影管理： 
+   电影：增删改查
+   电影分类：增删改查
+
+
+对电影院管理： 增、删、改、查
+
+
+
+音乐：
+音乐分类：
+------榜单分类
+1.热门音乐人分类
+
+2.近期热门歌单最热
+3.近期热门歌单流行
+4.近期热门歌单摇滚 
+5.近期热门歌单民谣   
+6.近diany单原生
+
+
+
+数据库表：
+categories：电影种类
+moviescomments：电影评论
+users：用户（roles>50为管理员）
+
+
+
+菜谱内容
+1.一日三餐------热门推荐，最新，口碑，分类删选，全局查询
+2.休闲时光-----下午茶
+3.健康资讯------
+
+登陆后才可以评论菜谱
+
+
+
+
+
+
+
+
+
+添加菜谱界面，添加界面路由及内容
+1.app/controllers/recipes:界面显示路由控制器与models和schema，router.js相关联
+2.app/models/recipes：与schema/recipes相关联
+3.app/schemas/recipes：声明数据类型
+4.views/pages/recipes:界面
+5.router.js:路由与controllers相关联
+代码示例：
+引用
+1.
+ /* 菜谱首页模板路由控制器 */
+  RecipesIndex = require('../app/controllers/recipes/recipes_index'),
+2. 
+// 菜谱录入与菜谱列表路由控制器
+  Recipes = require('../app/controllers/recipes/recipes'),
+
+路由跳转
+/////首页
+  app.get('/', RecipesIndex.index);
+  //菜谱录入路由
+  app.route('/admin/recipes/new').get(User.signinRequired, User.adminRequired, Recipes.new);
+// 菜谱列表路由
+  app.route('/admin/recipes/list').get(User.signinRequired, User.adminRequired, Recipes.list);
+
+
+lastChange项目分支
+master：未经过改变
+navChange：添加菜谱管理界面的菜谱列表录入等界面，电影界面分类有问题无法根据分类查看电影
+changeFace：电影模块未出现问题
+recipesIndex：实现菜谱界面
